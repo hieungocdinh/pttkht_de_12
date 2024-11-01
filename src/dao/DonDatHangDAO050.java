@@ -17,7 +17,8 @@ public class DonDatHangDAO050 extends DAO050 {
                 "WHERE tblKhachHang050id = ? " +
                 "AND thoigiandathang >= ? " +
                 "AND thoigiandathang <= ? " +
-                "AND ((loaiDonHang = 'TRUCTIEP') OR (loaiDonHang = 'TRUCTUYEN' AND trangthai = 'DAHOANTHANH')) ";
+                "AND ((loaiDonHang = 'TRUCTIEP') OR (loaiDonHang = 'TRUCTUYEN' AND trangthai = 'DAHOANTHANH')) " +
+                "ORDER BY thoigiandathang DESC";
 
         try (Connection conn = this.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

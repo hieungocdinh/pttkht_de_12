@@ -3,7 +3,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="java.text.DecimalFormat" %>
 
-<%@ page import="model.ThanhVien050"%>
+<%@ page import="model.NhanVien050"%>
 <%@ page import="dao.KhachHangDAO050"%>
 <%@ page import="model.KhachHang050"%>
 <%@ page import="dao.DonDatHangDAO050"%>
@@ -105,9 +105,9 @@
 </head>
 <body>
 	<%
-		ThanhVien050 nvql = (ThanhVien050)session.getAttribute("NVQL");
+		NhanVien050 nvql = (NhanVien050)session.getAttribute("NVQL");
 		if(nvql==null){
-			response.sendRedirect("/bt_pttkht_de12/gdDangNhap050.jsp");
+			response.sendRedirect("/bt_pttkht_de12/view/thanhvien/gdDangNhap050.jsp");
 			return;
 		}
 		

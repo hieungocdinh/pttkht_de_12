@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="model.ThanhVien050" %>
+    pageEncoding="UTF-8" import="model.NhanVien050" %>
 <%@ page import="dao.TKKhachHangTheoDoanhThuDAO050"%>
 <%@ page import="model.TKKhachHangTheoDoanhThu050"%>
 <%@ page import="java.util.List"%>
@@ -100,9 +100,9 @@
 </head>
 <body>
 	<%
-			ThanhVien050 nvql = (ThanhVien050)session.getAttribute("NVQL");
+			NhanVien050 nvql = (NhanVien050)session.getAttribute("NVQL");
 			if(nvql==null){
-				response.sendRedirect("/bt_pttkht_de12/gdDangNhap050.jsp");
+				response.sendRedirect("/bt_pttkht_de12/view/thanhvien/gdDangNhap050.jsp");
 				return;
 			}
 		
@@ -167,7 +167,7 @@
 				    } else {
 				%>
 				    <tr>
-				        <td colspan="5"></td>
+				        <td colspan="5" style="text-align:center">Không có dữ liệu thống kê</td>
 				    </tr>
 				<%
 				    }

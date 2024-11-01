@@ -32,6 +32,7 @@ public class TKKhachHangTheoDoanhThuDAO050 extends DAO050 {
                 "WHERE ddh.thoigiandathang >= ? " +
                 "AND ddh.thoigiandathang <= ? " +
                 "GROUP BY kh.tblThanhVien050id, kh.maKH, tv.hovaten " +
+                "HAVING tong_tien > 0 " +
                 "ORDER BY tong_tien DESC";
 
         try (Connection conn = this.getConnection();
