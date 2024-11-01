@@ -41,10 +41,7 @@ public class KhachHangDAO050 extends DAO050 {
             
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                KhachHang050 khachhang = new KhachHang050();
-                khachhang.setId(khachhangId);
-                khachhang.setMaKH(resultSet.getString("maKH"));
-                khachhang.setHovaten(resultSet.getString("hovaten"));
+                KhachHang050 khachhang = new KhachHang050(khachhangId, resultSet.getString("maKH"), resultSet.getString("hovaten"));
                 
                 return khachhang;
             } else {

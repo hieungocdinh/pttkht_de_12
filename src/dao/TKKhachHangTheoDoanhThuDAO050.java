@@ -50,13 +50,7 @@ public class TKKhachHangTheoDoanhThuDAO050 extends DAO050 {
                     double tongTien = rs.getDouble("tong_tien");
                     
                     // Create a new TKKhachHangTheoDoanhThu050 object and add it to the list
-                    TKKhachHangTheoDoanhThu050 customerRevenue = new TKKhachHangTheoDoanhThu050();
-                    customerRevenue.setId(tblThanhVien050id);
-                    customerRevenue.setMaKH(maKH);
-                    customerRevenue.setHovaten(hovaten);
-                    customerRevenue.setTongDoanhThu(tongTien);
-                    customerRevenue.setNgayBD(Date.valueOf(ngayBD));
-                    customerRevenue.setNgayKT(Date.valueOf(ngayKT));
+                    TKKhachHangTheoDoanhThu050 customerRevenue = new TKKhachHangTheoDoanhThu050(tblThanhVien050id, maKH, hovaten, tongTien, Date.valueOf(ngayBD), Date.valueOf(ngayKT));
                     customerRevenueList.add(customerRevenue);
                 }
             }

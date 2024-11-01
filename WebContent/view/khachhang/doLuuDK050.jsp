@@ -32,7 +32,7 @@
         if (success) {
         	// Sau khi đăng ký thành công
             request.getSession().setAttribute("message", "Đăng ký thành công!");
-            response.sendRedirect("gdChinhKH050.jsp");
+            response.sendRedirect("gdDangKiThanhVien050.jsp");
         } else {
             // Đăng ký thất bại
             request.getSession().setAttribute("message", "Đăng ký thất bại. Vui lòng thử lại.");

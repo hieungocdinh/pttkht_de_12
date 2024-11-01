@@ -29,11 +29,8 @@ public class ThanhVienDAO050 extends DAO050 {
 	                try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
 	                    if (generatedKeys.next()) {
 	                        int thanhvienid = generatedKeys.getInt(1);
-
 	                        // Gọi KhachHangDAO để thêm bản ghi vào bảng tblKhachHang050
-	                        KhachHang050 khachhang = new KhachHang050();
-	                        khachhang.setId(thanhvienid);
-	                        
+	                        KhachHang050 khachhang = new KhachHang050(thanhvienid);
 	                        KhachHangDAO050 khachhangDao = new KhachHangDAO050();
 	                        return khachhangDao.insert(khachhang);
 	                    }

@@ -6,12 +6,20 @@ import java.text.DecimalFormat;
 public class TKKhachHangTheoDoanhThu050 extends KhachHang050 {
 	private Date ngayBD;
 	private Date ngayKT;
-	private String hovaten;
     private double tongDoanhThu;
 
     // Constructor
     public TKKhachHangTheoDoanhThu050() {
         super(); // Gọi constructor của lớp cha
+    }
+    
+    public TKKhachHangTheoDoanhThu050(int khachhangId, String maKH, String hovaten, Double tongdoanhthu, Date ngayBD, Date ngayKT) {
+        this.setId(khachhangId);
+        this.setMaKH(maKH);
+        this.setHovaten(hovaten);
+        this.tongDoanhThu = tongdoanhthu;
+        this.ngayBD = ngayBD;
+        this.ngayKT = ngayKT;
     }
 
     // Getter và Setter cho tongDoanhThu
@@ -26,14 +34,6 @@ public class TKKhachHangTheoDoanhThu050 extends KhachHang050 {
 
     public void setTongDoanhThu(double tongDoanhThu) {
         this.tongDoanhThu = tongDoanhThu;
-    }
-    
-    public String getHovaten() {
-        return hovaten;
-    }
-
-    public void setHovaten(String hovaten) {
-        this.hovaten = hovaten;
     }
     
     public Date getNgayBD() {

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="model.ThanhVien050" %>
+    pageEncoding="UTF-8" import="model.KhachHang050" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,22 +56,12 @@
         background-color: #45a049;
     }
 </style>
-<script>
-        window.onload = function() {
-            var message = '<%= session.getAttribute("message") != null ? session.getAttribute("message") : "" %>';
-            if (message) {
-                alert(message);
-                <% session.removeAttribute("message"); %> 
-            }
-        };
-</script>
-
 </head>
 
 <body>
 <%
     // Lấy thông tin khách hàng từ session
-    ThanhVien050 kh = (ThanhVien050) session.getAttribute("KH");
+    KhachHang050 kh = (KhachHang050) session.getAttribute("KH");
 
     // Kiểm tra xem khách hàng có session hay không
     if (kh == null) {

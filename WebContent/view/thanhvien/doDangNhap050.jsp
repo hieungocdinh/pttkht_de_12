@@ -36,19 +36,19 @@
                 response.sendRedirect("gdDangNhap050.jsp");
             } else {
                 if (nv.getVitri().equals("NVBH")) {
-                	session.setAttribute("NVBH", thanhvien);
-                    response.sendRedirect("nvbanhang/gdChinhNVBH050.jsp");
+                	session.setAttribute("NVBH", nv);
+                    response.sendRedirect("/bt_pttkht_de12/view/nvbanhang/gdChinhNVBH050.jsp");
                 } else if (nv.getVitri().equals("NVK")) {
-                	session.setAttribute("NVK", thanhvien);
-                    response.sendRedirect("nvkho/gdChinhNVK050.jsp");
+                	session.setAttribute("NVK", nv);
+                    response.sendRedirect("/bt_pttkht_de12/view/nvkho/gdChinhNVK050.jsp");
                 } else if (nv.getVitri().equals("NVQL")) {
-                	session.setAttribute("NVQL", thanhvien);
-                    response.sendRedirect("nvquanly/gdChinhNVQL050.jsp");
+                	session.setAttribute("NVQL", nv);
+                    response.sendRedirect("/bt_pttkht_de12/view/nvquanly/gdChinhNVQL050.jsp");
                 }
             }
         } else {
-        	session.setAttribute("KH", thanhvien);
-            response.sendRedirect("khachhang/gdChinhKH050.jsp");
+        	session.setAttribute("KH", kh);
+            response.sendRedirect("/bt_pttkht_de12/view/khachhang/gdChinhKH050.jsp");
         }
     }
 %>

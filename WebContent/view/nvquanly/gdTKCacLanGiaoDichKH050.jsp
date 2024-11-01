@@ -114,9 +114,9 @@
 		Integer khachhangId = Integer.parseInt(request.getParameter("khachhangId"));
 		String ngayBD = request.getParameter("ngayBD");
 	    String ngayKT = request.getParameter("ngayKT");
-	    List<DonDatHang050> results = null;
 	    
 	    KhachHang050 kh = null;
+	    List<DonDatHang050> results = null;
 	    
 	    if (khachhangId != null ){
 	    	KhachHangDAO050 khachhangDao = new KhachHangDAO050();
@@ -169,7 +169,7 @@
 		                    <tr>
 		                        <td><%= stt++ %></td>
 		                        <td><%= ddh.getMa() %></td>
-		                        <td><%= ddh.getNgaydathang() %></td>
+		                        <td><%= ddh.getThoigiandathang() %></td>
 		                        <td><%= ddh.getLoaiDonHang() %></td>
 		                        <td><%= ddh.getTongtienFormatted() %> VNĐ</td>
 		                    </tr>

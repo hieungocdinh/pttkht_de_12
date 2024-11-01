@@ -10,7 +10,10 @@ public class NhanVienDAO050 extends DAO050 {
     }
 
     public NhanVien050 findById(int thanhVienId) {
-    	String sql = "SELECT * FROM tblNhanVien050 WHERE tblThanhVien050id = ?";
+    	String sql = "SELECT nv.*, tv.* " +
+    	        "FROM tblNhanVien050 nv " +
+    	        "JOIN tblThanhVien050 tv ON nv.tblThanhVien050id = tv.id " +
+    	        "WHERE nv.tblThanhVien050id = ?";
         
         try (Connection conn = this.getConnection();
              PreparedStatement statement = conn.prepareStatement(sql)) {
@@ -23,6 +26,7 @@ public class NhanVienDAO050 extends DAO050 {
             	nhanvien.setId(resultSet.getInt("tblThanhVien050id"));
             	nhanvien.setMaNV(resultSet.getString("maNV"));
             	nhanvien.setVitri(resultSet.getString("vitri"));
+            	nhanvien.setHovaten(resultSet.getString("hovaten"));
             	
                 return nhanvien;
             } else {

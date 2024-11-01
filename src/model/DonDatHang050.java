@@ -5,14 +5,27 @@ import java.text.DecimalFormat;
 public class DonDatHang050 {
     private int id;
     private String ma;
-    private String ngaydathang;
+    private String thoigiandathang;
     private float tongtien;
     private String loaiDonHang;
     private String trangthai;
     private String diachi;
     private int nhanVienId;
     private int khachHangId;
-
+    
+    //Constructor
+    public DonDatHang050() {
+    	
+    }
+    
+	public DonDatHang050(int id, String ma, String thoigiandathang, Float tongtien, String loaidonhang) {
+		this.id = id;
+		this.ma = ma;
+		this.thoigiandathang = thoigiandathang;
+		this.tongtien = tongtien;
+		this.loaiDonHang = loaidonhang;
+	}
+    
     // Getters and Setters
     public int getId() {
         return id;
@@ -30,12 +43,12 @@ public class DonDatHang050 {
         this.ma = ma;
     }
 
-    public String getNgaydathang() {
-        return ngaydathang;
+    public String getThoigiandathang() {
+        return thoigiandathang;
     }
 
-    public void setNgaydathang(String ngaydathang) {
-        this.ngaydathang = ngaydathang;
+    public void setThoigiandathang(String thoigiandathang) {
+        this.thoigiandathang = thoigiandathang;
     }
 
     public float getTongtien() {

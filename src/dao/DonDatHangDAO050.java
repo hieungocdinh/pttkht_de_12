@@ -28,12 +28,7 @@ public class DonDatHangDAO050 extends DAO050 {
             ResultSet rs = stmt.executeQuery();
             
             while (rs.next()) {
-                DonDatHang050 donDatHang = new DonDatHang050();
-                donDatHang.setId(rs.getInt("id"));
-                donDatHang.setMa(rs.getString("ma"));
-                donDatHang.setNgaydathang(rs.getString("thoigiandathang"));
-                donDatHang.setTongtien(rs.getFloat("tongtien"));
-                donDatHang.setLoaiDonHang(rs.getString("loaiDonHang"));
+                DonDatHang050 donDatHang = new DonDatHang050(rs.getInt("id"), rs.getString("ma"), rs.getString("thoigiandathang"), rs.getFloat("tongtien"), rs.getString("loaiDonHang"));
                 
                 donDatHangList.add(donDatHang);
             }
