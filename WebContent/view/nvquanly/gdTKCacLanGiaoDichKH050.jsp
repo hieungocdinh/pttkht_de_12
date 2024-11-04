@@ -155,7 +155,7 @@
 		            <th>Mã HĐ</th>
 		            <th>Thời gian</th>
 		            <th>Loại đơn hàng</th>
-		            <th>Tổng tiền</th>
+		            <th>Doanh thu</th>
 		        </tr>
 		    </thead>
 		    <tbody>

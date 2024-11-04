@@ -185,6 +185,16 @@
                 alert("Vui lòng nhập ngày bắt đầu và ngày kết thúc.");
                 return;
             }
+            
+	         // Chuyển đổi ngày thành đối tượng Date để so sánh
+	            const start = new Date(startDate);
+	            const end = new Date(endDate);
+
+            // Kiểm tra nếu ngày bắt đầu lớn hơn hoặc bằng ngày kết thúc
+            if (start >= end) {
+                alert("Ngày bắt đầu phải nhỏ hơn ngày kết thúc.");
+                return;
+            }
 
             // Tạo một form ẩn để gửi dữ liệu đến server
             document.getElementById("dateForm").submit();
