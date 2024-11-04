@@ -130,7 +130,8 @@
 	%>
 	
 	<nav>
-	    <a href="gdChonTK050.jsp">Xem Thống Kê</a>
+	    <a href="/bt_pttkht_de12/view/nvquanly/gdChinhNVQL050.jsp">Trang chủ</a>
+    	<a href="/bt_pttkht_de12/view/nvquanly/gdChonTK050.jsp">Xem Thống Kê</a>
 	    <a href="#">Quản Lý Nhân Viên</a>
 	    <a href="#">Lập Báo Cáo</a>
 	    <a href="#">Cài Đặt</a>
